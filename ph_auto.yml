@@ -11,12 +11,3 @@ hooks:
     description: Download and scrape Pornhub when you create a scene
     triggeredBy:
       - Scene.Create.Post
-tasks:
-  - name: 'Disable'
-    description: Disable the hook
-    defaultArgs:
-      mode: disable
-  - name: 'Enable'
-    description: Enable the hook
-    defaultArgs:
-      mode: enable
