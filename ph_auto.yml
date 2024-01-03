@@ -1,0 +1,22 @@
+name: Pornhub Full Auto
+description: Automatically downloads, scrapes, and updates a scene when created with a Pornhub URL
+version: 1.0
+url: https://github.com/FloppaSupreme/ph_auto_dl
+exec:
+  - python
+  - "{pluginDir}/py_plugins/ph_auto.py"
+interface: raw
+hooks:
+  - name: hook_create
+    description: Download and scrape Pornhub when you create a scene
+    triggeredBy:
+      - Scene.Create.Post
+tasks:
+  - name: 'Disable'
+    description: Disable the hook
+    defaultArgs:
+      mode: disable
+  - name: 'Enable'
+    description: Enable the hook
+    defaultArgs:
+      mode: enable
